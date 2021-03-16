@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Base Application</string>
+    <string name="help">help</string>
+    <string name="string_help_text">string_help_text</string>
+    <string name="quit">quit</string>
+    <string name="settings">settings</string>
+    <string name="account">account</string>
+    <string name="password">password</string>
+    <string name="phone">phone</string>
+    <string name="login">login</string>
+    <string name="sign_in">sign in</string>
+    <string name="back_toast">press exit again</string>
+</resources>
