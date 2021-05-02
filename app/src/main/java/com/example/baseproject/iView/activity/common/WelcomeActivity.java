@@ -116,9 +116,7 @@ public class WelcomeActivity extends BaseActivity<WelcomePresenter, WelcomeActiv
         time_text.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                RouterCenter.toCommonHome();
-                RouterCenter.toCommonWeb();
-                finish();
+                time = 0;
             }
         });
 
@@ -128,8 +126,7 @@ public class WelcomeActivity extends BaseActivity<WelcomePresenter, WelcomeActiv
             public void run() {
                 if (time == 0) {
                     timer.cancel();
-//                    RouterCenter.toCommonHome();
-                    RouterCenter.toCommonWeb();
+                    RouterCenter.toCommonHome();
                     finish();
                 }
                 time_text.setText(time + " s");

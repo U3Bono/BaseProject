@@ -27,7 +27,7 @@ public class PreferencesUtil {
         SharedPreferences sharedPreferences = context.getSharedPreferences(USER_INFO, Context.MODE_PRIVATE);
         Editor editor = sharedPreferences.edit();
         editor.putInt(key, value);
-        editor.commit();
+        editor.apply();
     }
 
     public static int getIntPreference(Context context, String key, int defaultValue) {
@@ -42,7 +42,7 @@ public class PreferencesUtil {
         SharedPreferences sharedPreferences = context.getSharedPreferences(USER_INFO, Context.MODE_PRIVATE);
         Editor editor = sharedPreferences.edit();
         editor.putBoolean(key, value);
-        editor.commit();
+        editor.apply();
     }
 
     public static Boolean getBooleanPreference(Context context, String key, Boolean defaultValue) {
@@ -58,7 +58,7 @@ public class PreferencesUtil {
             SharedPreferences sharedPreferences = context.getSharedPreferences(USER_INFO, Context.MODE_PRIVATE);
             Editor editor = sharedPreferences.edit();
             editor.putString(key, value);
-            editor.commit();
+            editor.apply();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -77,7 +77,7 @@ public class PreferencesUtil {
         SharedPreferences sharedPreferences = context.getSharedPreferences(USER_INFO, Context.MODE_PRIVATE);
         Editor editor = sharedPreferences.edit();
         editor.putLong(key, value);
-        editor.commit();
+        editor.apply();
     }
 
     public static long getLongPreference(Context context, String key, long defaultValue) {
@@ -97,7 +97,7 @@ public class PreferencesUtil {
                 String string64 = new String(Base64.encode(byteArrayOutputStream.toByteArray(),
                         0));
                 Editor editor = context.getSharedPreferences(USER_INFO, Context.MODE_PRIVATE).edit();
-                editor.putString(key, string64).commit();
+                editor.putString(key, string64).apply();
             } catch (IOException e) {
                 e.printStackTrace();
             }
